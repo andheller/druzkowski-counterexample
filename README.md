@@ -22,7 +22,7 @@ In fact, their common image is $e_{212}/1728$. The matrix satisfies the
 additional square-zero reduction condition
 
 $$
-A^2=0,\qquad \operatorname{rank}A=32.
+A^2=0,\qquad \mathrm{rank}(A)=32.
 $$
 
 The primary object is [`A_integer.coo.tsv`](A_integer.coo.tsv), a one-based
@@ -206,8 +206,8 @@ identity gives
 $$
 \begin{aligned}
 \det JG_{A_0}(W)
-&=\det\left(I+3\operatorname{diag}((DZ)^{*2})DB\right)\\
-&=\det\left(I+3B\operatorname{diag}((DZ)^{*2})D\right)\\
+&=\det\left(I+3\,\mathrm{diag}((DZ)^{*2})DB\right)\\
+&=\det\left(I+3B\,\mathrm{diag}((DZ)^{*2})D\right)\\
 &=\det J\Phi(Z)=1.
 \end{aligned}
 $$
@@ -227,12 +227,12 @@ $$
 The structural certificate verifies
 
 $$
-\operatorname{rank}D=47,\quad
-\operatorname{rank}B=32,\quad
+\mathrm{rank}(D)=47,\quad
+\mathrm{rank}(B)=32,\quad
 BD=0.
 $$
 
-Consequently $\operatorname{rank}A_0=32$ and
+Consequently $\mathrm{rank}(A_0)=32$ and
 $A_0^2=D(BD)B=0$.
 
 #### 5. Integer matrix
