@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this explicit matrix or its certificates, please cite this repository."
-title: "An Explicit 212-Dimensional Square-Zero Druzkowski Counterexample"
+title: "An Explicit 212-Dimensional Square-Zero Druzkowski Realization of the Alpoge-Fable Counterexample"
 type: software
 authors:
   - family-names: Heller
@@ -11,9 +11,9 @@ url: "https://github.com/andheller/druzkowski-counterexample"
 version: 0.1.0
 date-released: 2026-07-21
 abstract: >-
-  An explicit 212-by-212 integer square-zero Druzkowski matrix, three exact
-  rational collision points, a deterministic construction from the
-  Alpoge-Fable Keller map, and exact structural certificates.
+  An explicit 212-by-212 integer square-zero Druzkowski realization of the
+  Alpoge-Fable Keller counterexample, with three exact rational collision
+  points, a deterministic construction, and exact structural certificates.
 keywords:
   - Jacobian conjecture
   - Druzkowski map

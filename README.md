@@ -1,4 +1,4 @@
-# An Explicit 212-Dimensional Square-Zero Drużkowski Counterexample
+# An Explicit 212-Dimensional Square-Zero Drużkowski Realization of the Alpöge–Fable Counterexample
 
 [![Exact verification](https://github.com/andheller/druzkowski-counterexample/actions/workflows/verify.yml/badge.svg)](https://github.com/andheller/druzkowski-counterexample/actions/workflows/verify.yml)
 
@@ -44,6 +44,19 @@ The announcement should not be confused with a peer-reviewed publication.
 Targeted searches found no earlier public matrix derived from this seed. That
 is context, not a claim of priority.
 
+## Why this artifact is useful
+
+The three-variable map is the simplest object for understanding the underlying
+counterexample. This repository serves a different purpose: it supplies a
+literal “bad matrix” in the canonical square-zero cubic-linear class. It can be
+used as an exact regression test for proposed Drużkowski criteria and
+invertibility algorithms, as a starting point for studying the kernel and image
+structure of $A$, and as a target for end-to-end formalization.
+
+The dimension $212$ and rank $32$ are construction-dependent upper bounds,
+not minimality claims. Alternative degree reductions, homogenizations, or
+simultaneous cube decompositions may produce substantially smaller examples.
+
 ## Verify it
 
 Python 3.11 or newer is recommended.
@@ -68,6 +81,24 @@ claim boundaries and a suggested independent-review order.
 ## Construction
 
 ### Seed map
+
+The [original announcement][announcement] writes the map in coordinate order
+$(P,Q,R)$, with Jacobian determinant $-2$ and common image $(-1/4,0,0)$.
+This repository applies the invertible linear output normalization
+
+$$
+F=(R/2,Q,P).
+$$
+
+Swapping the first and third outputs and scaling the new first output by $1/2$
+multiplies the determinant by $-1/2$. Thus the normalized map has determinant
+$1$, common image $(0,0,-1/4)$, and identity linear part at the origin. It is
+the same seed map in normalized output coordinates, not a different example.
+
+The announcement also links short Wolfram Alpha checks of the [Jacobian
+determinant][wa-determinant] and the collision at
+[the value at (0,0,-1/4)][wa-point-zero] and
+[the value at (1,-3/2,13/2)][wa-point-one].
 
 Put $q=1+xy$ and define the tangent-to-identity map
 
@@ -200,6 +231,11 @@ D=\begin{bmatrix}D_0\\0\end{bmatrix},\qquad
 A_0=DB\in M_{212}(\mathbb Q).
 $$
 
+The condition $A^2=0$ alone does **not** imply that the Jacobian determinant is
+constant: the variable diagonal factor in $JD_A$ need not commute with $A$.
+The determinant certificate here depends essentially on the pairing $A_0=DB$
+and the following application of Sylvester's determinant identity.
+
 For $G_{A_0}(W)=W+(A_0W)^{*3}$, put $Z=BW$. Sylvester's determinant
 identity gives
 
@@ -284,3 +320,8 @@ Repository citation metadata is provided in [`CITATION.cff`](CITATION.cff).
 Mathematical review, independent implementations, and minimal-dimension or
 rank improvements are especially welcome. Reproducibility reports should
 include the failing command and first differing certificate entry.
+
+[announcement]: https://x.com/__alpoge__/status/2079028340955197566
+[wa-point-one]: https://www.wolframalpha.com/input?i=%28%281%2Bx+y%29%5E3+z+%2B+y%5E2+%281+%2B+x+y%29+%284+%2B+3x+y%29%2C+y+%2B+3x+%281+%2B+x+y%29%5E2+z+%2B+3x+y%5E2+%284+%2B+3x+y%29%2C+2x+-+3x%5E2+y+-+x%5E3+z%29+at+%28x%3D1%2C+y%3D-3%2F2%2C+z%3D13%2F2%29
+[wa-point-zero]: https://www.wolframalpha.com/input?i=%28%281%2Bx+y%29%5E3+z+%2B+y%5E2+%281+%2B+x+y%29+%284+%2B+3x+y%29%2C+y+%2B+3x+%281+%2B+x+y%29%5E2+z+%2B+3x+y%5E2+%284+%2B+3x+y%29%2C+2x+-+3x%5E2+y+-+x%5E3+z%29+at+%28x%3D0%2C+y%3D0%2C+z%3D-1%2F4%29
+[wa-determinant]: https://www.wolframalpha.com/input?i=Det%5BD%5B%7B%281%2Bx+y%29%5E3+z+%2B+y%5E2+%281+%2B+x+y%29+%284+%2B+3x+y%29%2C+y+%2B+3x+%281+%2B+x+y%29%5E2+z+%2B+3x+y%5E2+%284+%2B+3x+y%29%2C+2x+-+3x%5E2+y+-+x%5E3+z%7D%2C+%7B%7Bx%2Cy%2Cz%7D%7D%5D%5D
