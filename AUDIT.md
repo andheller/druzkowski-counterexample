@@ -6,9 +6,9 @@ The claim in this repository has several layers. They can be checked separately.
 
 `verify_artifacts.py` reads `A_integer.coo.tsv` and `points.json`, evaluates
 
-\[
+$$
 D_A(x)=x+(Ax)^{*3}
-\]
+$$
 
 at all three saved points using exact rationals, and compares the resulting
 212 coordinates. It also multiplies the sparse matrix by itself to check
@@ -26,11 +26,11 @@ maps and exact identities from which it follows:
    both with determinant one.
 3. Check the saved linear normalization has determinant one.
 4. Reconstruct the 47-dimensional cubic homogeneous map and its identity
-   \(H=B_0(D_0z)^{*3}\) from `pairing.json`.
-5. Form \(B=[B_0\mid\tau]\), \(D=[D_0;0]\), and check the published integer
-   matrix is exactly \(A=144DB\).
+   $H=B_0(D_0z)^{*3}$ from `pairing.json`.
+5. Form $B=[B_0\mid\tau]$, $D=[D_0;0]$, and check the published integer
+   matrix is exactly $A=144DB$.
 6. Apply Sylvester's determinant identity to transfer
-   \(\det J\Phi=1\) to \(\det JD_A=1\).
+   $\det J\Phi=1$ to $\det JD_A=1$.
 
 `verify_artifacts.py` performs these checks without importing `generate.py`.
 It treats the committed TSV and JSON files as its inputs and independently
@@ -57,13 +57,13 @@ floating-point test is part of the certificate.
 
 The most valuable independent review is the chain
 
-\[
+$$
 F_3\rightsquigarrow F_{23}\rightsquigarrow\Phi_{47}.
-\]
+$$
 
 In particular, reviewers should check the ten stable-equivalence identities,
 the determinant-one linear normalization, the homogenization block determinant,
-and the coefficientwise cube decomposition. The final \(47\to212\) pairing is
+and the coefficientwise cube decomposition. The final $47\to212$ pairing is
 short enough to verify directly from Section 4 of the README.
 
 Bug reports should include the verifier command, Python and SymPy versions,
