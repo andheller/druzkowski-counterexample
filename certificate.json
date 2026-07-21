@@ -1,0 +1,83 @@
+{
+  "claim": {
+    "collision": "D_A(u) == D_A(v) == D_A(w)",
+    "determinant_identity": "det J(D_A) == 1",
+    "matrix": "A_integer.coo.tsv",
+    "points": "points.json"
+  },
+  "construction": {
+    "cube_basis_reduction": "221 merged cubes, exact RREF rank 211",
+    "degree_reduction": "fixed audited 10-step determinant-one polynomial-block BCW schedule, followed by exact determinant-one linear normalization",
+    "homogenization": "Phi(X,Y,T)=(X+T*R2(X)-T^2*Y,Y+R3(X),T)",
+    "integer_scaling": "A=12^2*A0; preimages=preimages0/12^3",
+    "pairing": "B=[B0|target], D=[D0;0], A0=D*B"
+  },
+  "seed_map": [
+    "-x0**3*x2/2 - 3*x0**2*x1/2 + x0",
+    "3*x0**3*x1**2*x2 + 9*x0**2*x1**3 + 6*x0**2*x1*x2 + 12*x0*x1**2 + 3*x0*x2 + x1",
+    "x0**3*x1**3*x2 + 3*x0**2*x1**4 + 3*x0**2*x1**2*x2 + 7*x0*x1**3 + 3*x0*x1*x2 + 4*x1**2 + x2"
+  ],
+  "seed_points": [
+    [
+      "0",
+      "0",
+      "-1/4"
+    ],
+    [
+      "1",
+      "-3/2",
+      "13/2"
+    ],
+    [
+      "-1",
+      "3/2",
+      "13/2"
+    ]
+  ],
+  "seed_target": [
+    "0",
+    "0",
+    "-1/4"
+  ],
+  "sha256": {
+    "A_integer.coo.tsv": "18310a62d78c57e7885592360da9545385eec26a15968e783e4661fd75e320d4",
+    "basis_reduction.json": "aa460004109ae02ec993b58b5a5c01fe1960f074af4ba36a1e6118380eaeacf2",
+    "block_reduction.json": "3d959ac5ec5b697cf5c6f938c655ee811ecd16fbccbecb7f9e776182e79fcd2e",
+    "pairing.json": "932d6cf59f597aa422e95b246c21acdfe49129ecec2f0f0f881ff15040688807",
+    "points.json": "642363e0d67323baee2b6947522fcbae7da381bb6e574197c7c5080287b66836"
+  },
+  "stats": {
+    "A_cubed_zero": true,
+    "A_squared_nonzero": false,
+    "A_squared_zero": true,
+    "BD_squared_zero": true,
+    "BD_zero": true,
+    "coordinate_scaling": 1728,
+    "cube_coefficients_nonzero": 490,
+    "cube_forms": 211,
+    "cube_polynomial_rank": 211,
+    "dimension": 212,
+    "eliminated_dependent_cube_forms": 10,
+    "homogeneous_dimension": 47,
+    "linear_form_coefficients_nonzero": 510,
+    "matrix_scaling": 144,
+    "max_abs_matrix_entry": 3888,
+    "max_abs_point_numerator": 56181887,
+    "max_point_denominator": 7077888,
+    "merged_cube_forms_before_basis_reduction": 221,
+    "nilpotency_index_A": 2,
+    "nonzero_matrix_entries": 5415,
+    "nonzero_point_entries": [
+      146,
+      197,
+      196
+    ],
+    "rank_A": 32,
+    "rank_B": 32,
+    "rank_BD": 0,
+    "rank_D": 47,
+    "rational_matrix_denominator_lcm": 24,
+    "reduced_dimension": 23,
+    "reduction_steps": 10
+  }
+}
